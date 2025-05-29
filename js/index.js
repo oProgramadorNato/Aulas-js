@@ -34,9 +34,18 @@ Exemplo:
         OCASIONA EM ERRO POIS NÃO É POSSIVEL REATRIBUIR UMA CONSTANTE
 */
 
+//Objetos
 
+const carro = {
+    marca: "Ford",
+    modelo: "Ka",
+    ano: 2025,
+    placa: "ABC-1234",
+    buzina: function (){ alert('Biiiiiiiiiii')},
+        completo: function (){
+            return "A marca desse carro é: " + this.marca + "E o modelo do carro é: " + this.modelo
+        }
+    };
+console.log (carro.completo());
 
-var a=1;
-var b=2;
-var c= a + b;
-console.log(c)
+//Eventos
