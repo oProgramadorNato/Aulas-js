@@ -49,3 +49,51 @@ const carro = {
 console.log (carro.completo());
 
 //Eventos
+/*
+| Evento JS/HTML | Significado                                      |
+| -------------- | ------------------------------------------------ |
+| `onclick`      | Clique simples com o mouse                       |
+| `ondblclick`   | Clique duplo com o mouse                         |
+| `onmouseover`  | Cursor entra sobre um elemento                   |
+| `onmouseout`   | Cursor sai de um elemento                        |
+| `onmousedown`  | Botão do mouse pressionado                       |
+| `onmouseup`    | Botão do mouse solto                             |
+| `onmousemove`  | Movimento do mouse sobre um elemento             |
+| `onkeydown`    | Tecla pressionada (qualquer tecla)               |
+| `onkeyup`      | Tecla solta após ser pressionada                 |
+| `onkeypress`   | Tecla digitada (gera caractere)                  |
+| `onfocus`      | Elemento recebe foco (ex: cursor em campo texto) |
+| `onblur`       | Elemento perde o foco                            |
+| `onchange`     | Valor de um campo foi alterado                   |
+| `onsubmit`     | Formulário foi enviado                           |
+*/
+
+function eventoClick(){
+    alert('Adicionou um evento de click');
+    document.body.style.background = "yellow";
+}
+
+function eventodblClick(){
+    alert('Adicionou um evento de click');
+    document.body.style.background = "blue";
+}
+
+function viraVermelho(){
+    let div = document.getElementById("test")
+    div.style.backgroundColor = "red";
+}
+function viraCinza(){
+    let div = document.getElementById("test")
+    div.style.backgroundColor = "grey";
+}
+function limpaTexto(){
+    document.getElementById("campoTexto").value = ""
+}
+function mudou(){
+    alert('mudou')
+}
+function teclaPressionada(){
+        let input = document.getElementById("campoTexto").value;
+        console.log(input);
+
+}
