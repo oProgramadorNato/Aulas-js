@@ -97,3 +97,54 @@ function teclaPressionada(){
         console.log(input);
 
 }
+
+
+/* ARRAYS
+
+Arrays em JavaScript são usados para armazenar vários valores em uma única variável. 
+
+Diferente dos objetos, que usam propriedades (ou "nomes") para identificar seus valores, os arrays utilizam índices (ou posições numéricas) para acessar seus elementos. 
+
+Pense em um array como uma lista de itens organizados em uma ordem específica, onde cada item pode ser acessado por sua posição na lista.
+
+Exemplo:
+const lista = ["arroz", "feijão", "macarrão", "leite"];
+
+lista[0] // acessa o valor "arroz" (posição 0)
+lista[1] // acessa o valor "feijão" (posição 1)
+
+E assim por diante.
+*/
+
+const lista = ["arroz", "feijao", "macarrao", "leite"];
+let x = lista[3];
+alert(x);
+console.log(lista)
+
+/*Diferença entre Array e Objeto
+ARRAY: Presença de '[]', sem necessidade de especificar
+const pessoa = ['Dimitri', 'Silva', 30]
+
+OBJETO:  Presença de '{}', necessidade de especificar
+const pessoa= {
+    nome: "Dimitri";
+    sobrenome: "Silva";
+    idade: 30;}
+*/
+
+const pessoa = ['Dimitri', 'Silva', 30, 'professor']
+
+//Descobrir o primeiro item da matriz
+console.log("Primeiro item da matriz: " + pessoa[0])
+
+//descobrir quantos itens tem na matriz
+console.log("Quantos itens tem na matriz: " + pessoa.length); //3
+
+//adicionar um item na matriz
+pessoa.push("Brasileiro");
+pessoa[pessoa.length] = "Casado";
+
+//descobrir o ultimo item da matriz
+console.log("Descobrir o ultimo item da matriz: " + pessoa[pessoa.length -1]);
+
+console.log(pessoa)
