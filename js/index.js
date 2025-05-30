@@ -48,6 +48,11 @@ const carro = {
     };
 console.log (carro.completo());
 
+
+
+
+
+
 //Eventos
 /*
 | Evento JS/HTML | Significado                                      |
@@ -69,12 +74,12 @@ console.log (carro.completo());
 */
 
 function eventoClick(){
-    alert('Adicionou um evento de click');
+    console.log('Adicionou um evento de click');
     document.body.style.background = "yellow";
 }
 
 function eventodblClick(){
-    alert('Adicionou um evento de click');
+    console.log('Adicionou um evento de click');
     document.body.style.background = "blue";
 }
 
@@ -90,13 +95,16 @@ function limpaTexto(){
     document.getElementById("campoTexto").value = ""
 }
 function mudou(){
-    alert('mudou')
+    console.log('mudou')
 }
 function teclaPressionada(){
         let input = document.getElementById("campoTexto").value;
         console.log(input);
 
 }
+
+
+
 
 
 /* ARRAYS
@@ -147,4 +155,38 @@ pessoa[pessoa.length] = "Casado";
 //descobrir o ultimo item da matriz
 console.log("Descobrir o ultimo item da matriz: " + pessoa[pessoa.length -1]);
 
-console.log(pessoa)
+//Mostrar as matrizes na tela
+document.getElementById('texto').innerHTML =  pessoa.join("  ");
+//Adicionar espaço entre os textos
+pessoa.join("  ");
+
+
+/*
+| Método       | Descrição                                                   |
+| ------------ | ----------------------------------------------------------- |
+| `push()`     | Adiciona elemento ao final do array                         |
+| `pop()`      | Remove o último elemento                                    |
+| `shift()`    | Remove o primeiro elemento                                  |
+| `unshift()`  | Adiciona elemento no início                                 |
+| `splice()`   | Adiciona, remove ou substitui elementos                     |
+| `slice()`    | Retorna uma parte do array (não altera o original)          |
+| `concat()`   | Junta dois ou mais arrays                                   |
+| `indexOf()`  | Retorna o índice do elemento (ou -1 se não existir)         |
+| `includes()` | Verifica se o array contém determinado valor                |
+| `forEach()`  | Executa uma função para cada item do array                  |
+| `map()`      | Cria um novo array com os resultados de uma função aplicada |
+| `filter()`   | Cria um novo array com os elementos que passam no teste     |
+| `reduce()`   | Reduz o array a um único valor                              |
+| `find()`     | Retorna o primeiro elemento que satisfaz a condição         |
+| `sort()`     | Ordena o array (por padrão em ordem alfabética)             |
+| `reverse()`  | Inverte a ordem dos elementos                               |
+| `join()`     | Junta todos os elementos em uma string                      |
+| `flat()`     | Achata arrays aninhados em um único nível                   |
+*/
+
+pessoa.pop();
+
+
+//Mostrar itens na tela & console
+document.getElementById('texto').innerHTML =  pessoa.join("  ");
+console.log(pessoa);
