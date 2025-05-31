@@ -250,4 +250,4 @@ function filtragem (value, index, array){
 
 //Mostrar itens na tela & console
 document.getElementById('teste').innerHTML =  maior20;
-console.log(pessoa);
+console.log(pessoa);//teste
