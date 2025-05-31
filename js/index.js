@@ -126,7 +126,7 @@ E assim por diante.
 
 const lista = ["arroz", "feijao", "macarrao", "leite"];
 let x = lista[3];
-alert(x);
+//alert(x);
 console.log(lista)
 
 /*Diferença entre Array e Objeto
@@ -154,6 +154,7 @@ pessoa[pessoa.length] = "Casado";
 
 //descobrir o ultimo item da matriz
 console.log("Descobrir o ultimo item da matriz: " + pessoa[pessoa.length -1]);
+
 
 //Mostrar as matrizes na tela
 document.getElementById('texto').innerHTML =  pessoa.join("  ");
@@ -184,9 +185,69 @@ pessoa.join("  ");
 | `flat()`     | Achata arrays aninhados em um único nível                   |
 */
 
-pessoa.pop();
 
+//Remove o ultimo item
+pessoa.pop();
+//Adiciona um item ao final
+pessoa.push("Qualquer coisa");
+//remove o primeiro elemento da matriz
+pessoa.shift();
+//transforma um elemento no primeiro elemento da matriz
+pessoa.unshift("Efeito unshift");
+//A primeira variavel decide quantos itens serão apagados e a segunda quantos serão adicionados
+pessoa.splice(0, 1, "Splice 1, Splice 2")
+
+
+//concatena/ merge/ junta uma lista a outra
+const lista1 = ["Arroz", "Feijao", "Batata", "Macarrao"];
+const lista2 = ["Banana", "linguiça", "salada"];
+const lista3 = ["Salgadinho"]
+
+const superlista = lista1.concat(lista2,lista3);
+
+//Reparte a matriz a partir do numero escolhido
+const jogadores = [
+    "Romeirão", 
+    "Zé", 
+    "Pelé", 
+    "Cr7", 
+    "Messi", 
+    "Ronaldinho"
+];
+const craques = jogadores.slice(2,6);
+
+//Deixar a lista em ordem alfabetica
+jogadores.sort();
+//Para deixar a lista em ordem alfabetica reversa
+//Primeiro deixar ela em "sort" para ordena-las, e então:
+jogadores.reverse();
+
+//Para deixar a matriz em ordem numerica crescente (tem um sentido, eu só não sei qual)
+const numeros = [5,10,15,2,1,29,40];
+
+numeros.sort (function (a,b) {return a-b});
+
+//Para deixar a matriz em ordem numerica decrescente (tem um sentido, eu só não sei qual)
+numeros.sort (function (a,b) {return b-a});
+
+const numbers = [5,10,15,500,1,40,];
+
+//Para pegar o maior número da matriz
+function maiorNumero(array){
+    return Math.max.apply(null, array);
+}
+//Para pegar o menor número da matriz
+function menorNumero(array){
+    return Math.min.apply(null, array);
+}
+
+//Para filtrar seja la o que voce precisa
+const maior20 = numbers.filter(filtragem);
+
+function filtragem (value, index, array){
+    return value>20;
+}
 
 //Mostrar itens na tela & console
-document.getElementById('texto').innerHTML =  pessoa.join("  ");
+document.getElementById('teste').innerHTML =  maior20;
 console.log(pessoa);
