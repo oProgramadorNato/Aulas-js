@@ -112,7 +112,7 @@ function teclaPressionada(){
 Arrays em JavaScript são usados para armazenar vários valores em uma única variável. 
 
 Diferente dos objetos, que usam propriedades (ou "nomes") para identificar seus valores, os arrays utilizam índices (ou posições numéricas) para acessar seus elementos. 
-
+  
 Pense em um array como uma lista de itens organizados em uma ordem específica, onde cada item pode ser acessado por sua posição na lista.
 
 Exemplo:
@@ -251,3 +251,22 @@ function filtragem (value, index, array){
 //Mostrar itens na tela & console
 document.getElementById('teste').innerHTML =  maior20;
 console.log(pessoa);//teste
+
+
+
+
+//If e else
+
+function verificar() {
+    let novo2 = document.getElementById("novo2").value;
+
+    if (novo2 ==""|| novo2 == null){
+        let p = document.getElementById("novo")
+        p.innerHTML = "O campo não pode ser vazio";
+        p.style.color = "red"
+    }else{
+        let p = document.getElementById("novo")
+        p.innerHTML = "Tudo joia";
+        p.style.color = "green"
+    }
+}
