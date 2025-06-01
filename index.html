@@ -10,14 +10,11 @@
         }
     </style>
 </head>
-<body onresize="console.log('Houve um redimencionamento')">  
+<body>  
     
     <h1>Aprendendo JavaScript</h1>
-    <p id="novo"></p>
-    <input style="padding: 20px" type="text" id="novo2" placeholder="Digite seu nome">
-    <button onclick="verificar()" style="padding: 20px">Verificar</button>
-    <br><br>
-    
+    <p id="texto"></p>
+    <p id="teste"></p>
 
     <select onchange="mudou()" id="itens">
         <option value="1">Valor 1</option>
@@ -34,7 +31,16 @@
            onmouseover="viraVermelho()" 
            style="width:80%; height: 200px; background: grey; margin: auto auto;"></div><br><br>
 
-           <button id="Campo" onclick="verificar" style="padding: 20px">Verificar</button>
+           <p id="oito">Nenhuma cor disponivel</p>
+           <input id="cor" style= "padding:80px; font-size:40px" type="text" 
+           placeholder="Digite uma cor" >
+           <button onclick="verificaCor()" style= "padding:80px; font-size:40px">Verificar</button>
+
+           <br><br>
+           <p id="nove">Digite o numero do dia semana</p>
+           <input id="diadasemana" style= "padding:80px; font-size:40px" type="text" 
+           placeholder="Digite o numero da semana" >
+           <button onclick="diadasemana()" style= "padding:80px; font-size:40px">Verificar</button>
 
     <script src="/js/index.js"></script>
 </body>

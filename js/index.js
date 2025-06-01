@@ -112,7 +112,7 @@ function teclaPressionada(){
 Arrays em JavaScript são usados para armazenar vários valores em uma única variável. 
 
 Diferente dos objetos, que usam propriedades (ou "nomes") para identificar seus valores, os arrays utilizam índices (ou posições numéricas) para acessar seus elementos. 
-  
+
 Pense em um array como uma lista de itens organizados em uma ordem específica, onde cada item pode ser acessado por sua posição na lista.
 
 Exemplo:
@@ -248,25 +248,70 @@ function filtragem (value, index, array){
     return value>20;
 }
 
-//Mostrar itens na tela & console
-document.getElementById('teste').innerHTML =  maior20;
-console.log(pessoa);//teste
+/*
+SWITCH
+é usado para realizar diferentes ações com base em difertentes
+ condições no mesmo bloco de verificação.Caso a condição não seja
+  compativel não será executada e o valor padrão será acionado
+*/
+
+function verificaCor(){
+    let cor = document.getElementById("cor").value;
+//Para evitar erros, deixar todas as letras digitadas em minusculo para o codigo entender
+    cor = cor.toLowerCase();
 
 
+//Exemplo
+switch (cor) {
+    case "azul":
+        document.body.style.backgroundColor = "blue";
+        break;
+    case "vermelho":
+        document.body.style.backgroundColor = "red";
+        break;
+    case "rosa":
+        document.body.style.backgroundColor = "pink";
+        break;    
 
-
-//If e else
-
-function verificar() {
-    let novo2 = document.getElementById("novo2").value;
-
-    if (novo2 ==""|| novo2 == null){
-        let p = document.getElementById("novo")
-        p.innerHTML = "O campo não pode ser vazio";
-        p.style.color = "red"
-    }else{
-        let p = document.getElementById("novo")
-        p.innerHTML = "Tudo joia";
-        p.style.color = "green"
+    default:
+        document.getElementById("oito").innerHTML = "Não temos essa cor: " + cor ;
+        
+    
     }
 }
+
+//Fazer switch com datas
+function diadasemana(){
+    var dia = new Date().getDay();//Retorna o dia da semana  do usuario
+
+    switch(dia){
+        case 0:
+            document.getElementById("nove").innerHTML = " Hoje  é domingo";
+            break;
+        case 1:
+            document.getElementById("nove").innerHTML = " Hoje  é terça";
+            break;
+        case 2:
+            document.getElementById("nove").innerHTML = " Hoje  é quarta";
+            break;
+        case 3:
+            document.getElementById("nove").innerHTML = " Hoje  é quinta";
+            break;
+        case 4:
+            document.getElementById("nove").innerHTML = " Hoje  é sexta";
+            break;
+        case 5:
+            document.getElementById("nove").innerHTML = " Hoje  é sabado";
+            break;
+        case 6:
+            document.getElementById("nove").innerHTML = " Hoje  é segunda";
+            break;
+            default:
+                document.getElementById("nove").innerHTML = "Não sei que dia é... " + dia;
+    }
+}
+
+
+//Mostrar itens na tela & console
+document.getElementById('teste').innerHTML =  maior20;
+console.log(pessoa);
