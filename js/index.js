@@ -247,6 +247,9 @@ const maior20 = numbers.filter(filtragem);
 function filtragem (value, index, array){
     return value>20;
 }
+//Mostrar itens na tela & console
+document.getElementById('teste').innerHTML =  maior20;
+console.log(pessoa);
 
 /*
 SWITCH
@@ -396,6 +399,47 @@ const gol = new Carro("Volkswagem","Caxumba",2020);
 console.log(gol);
 
 
-//Mostrar itens na tela & console
-document.getElementById('teste').innerHTML =  maior20;
-console.log(pessoa);
+/**
+ MANIPULAR DATAS COM JAVASCRIPT
+ */
+
+ //Pegar a data atual
+let data = new Date();//comando basico para pegar a data
+console.log(data);
+
+//Pegar o ano
+let ano = data.getFullYear();
+console.log(ano);
+
+//Pegar o mes
+let mes = data.getMonth();
+console.log(mes);
+
+//Pegar o dia do mes 1 - 31
+let dia = data.getDate();
+console.log(dia)
+
+//Pegar o dia da semana
+let semana = data.getDay();
+console.log(semana)
+
+//Pegar a hora
+let hora = data.getHours();
+console.log(hora)
+
+//Pegar minutos
+let minutos = data.getMinutes();
+console.log(minutos);
+
+//Pegar segundos
+let segundos = data.getSeconds();
+console.log(segundos)
+
+//Pegar milissegundos
+let milisegundos = data.getMilliseconds();
+console.log(milisegundos)
+
+//Pegar data no padrão Brasil
+let dataBR = data.toLocaleString('pt-BR');
+console.log(dataBR)
+
