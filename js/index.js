@@ -443,3 +443,63 @@ console.log(milisegundos)
 let dataBR = data.toLocaleString('pt-BR');
 console.log(dataBR)
 
+
+/*
+JSON
+
+JSON significa Javascript Object Notation que traduzido pro portugues fica algo como "Notação de objeto JS"
+
+Explicando de um modo simples, JSON é basicamnete uma forma de converter um objeto
+em texto e vice-versa
+
+Ele é usado principalmente para transmitir dados entre sistemas de forma simples, ja que
+o formato de texto é lido por praticamente toda linguagem de programação.
+ 
+Para trabalhar com JSON no JS usamos dois métodos:
+
+JSON.parse() -> Converte texto no padrão JSON em objetos
+JSON.stringify() -> Converte objetos em texto padrao JSON
+
+*/
+//OBJETO CARRO
+const carrao = {
+    marca: "Fiat",
+    modelo: "Uno",
+    ano: 2001
+}
+//TRANSFORMOU OBJETO EM TEXTO
+let texto = JSON.stringify(carrao);//transformar um objeto em texto(String)
+
+//COLOCOU TEXTO NO HTML
+document.getElementById('area').innerHTML = texto;
+
+//CONVERTEU TEXTO EM OBJETO 
+let obj = JSON.parse(texto);
+
+//PEGAMOS UM VALOR DESTE OBJETO
+console.log(obj.modelo);
+
+//EXEMPLO REAL
+
+//FAZER UMA SOLICITAÇÃO NO SITE "VIACEP" UMA API DE ENDEREÇO
+const ajax = new XMLHttpRequest();//Metodo pra fazer uma requisição a um site sem ter que acessa-lo diretamente
+ajax.open('GET', 'https://viacep.com.br/ws/01001000/json/');//Pegar o link do site
+ajax.send();
+
+ajax.onload = function(){
+    document.getElementById('idem').innerHTML = this.responseText;
+    let obj = JSON.parse(this.responseText);
+    console.log(obj.ddd);
+}
+
+function buscarCEP(){
+    let input = document.getElementById('cep').value;
+
+    const ajax = new XMLHttpRequest();//Metodo pra fazer uma requisição a um site sem ter que acessa-lo diretamente
+    ajax.open('GET', 'https://viacep.com.br/ws/01001000/json/');//Pegar o link do site
+    ajax.send();
+
+    ajax.onload = function(){
+        document.getElementById('denovo').innerHTML = this.responseText;
+    }
+}
