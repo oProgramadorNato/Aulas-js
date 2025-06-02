@@ -322,7 +322,7 @@ for (let i = 0; i<101; i++){
     /*Transcrição do código
     for (let i = 0; i<10001; i++)
         "i" é igual a zero, começa no zero.
-        Enquanto "i" for menor que 10.001
+        Enquanto "i" for menor que 101
         ele vai adicionar um número (i++)
 
     document.getElementById("for").innerHTML += i + br
@@ -331,6 +331,43 @@ for (let i = 0; i<101; i++){
 for (let i = 2026; i > 1990; i--){
     document.getElementById("ano").innerHTML += "<option value='"+i+"'>"+i+"</option>"
 }
+/* EVENTOS DE TEMPO COM JAVASCRIPT
+
+Os eventos de tempo permitem a execução do código em intervalos de tempo especificados. 
+Esses intervalos de tempo são chamados de eventos de cronometragem.
+
+Os dois métodos-chave para usar com JavaScript são:
+
+setTimeout(function, em milisegundos)
+-> Executa uma função, depois de esperar um número especificado de milisegundos.
+
+setInterval(function, milliseconds)
+-> É o mesmo que setTimeout(), mas repete a execução da função continuamente.
+*/
+
+function ativarContagem(){
+    document.getElementById("tempo").innerHTML = "Começou a contar!";
+    //ATIVA A FUNÇÃO APENAS UMA VEZ APOS O TEMPO DETERMINADO
+    setTimeout(function(){
+        document.getElementById("tempo").innerHTML = "Executou o setTimeout";
+     }, 5000);
+}
+function pararContagem(){
+    clearTimeout("tempo");
+    document.getElementById("tempo").innerHTML = "Parou na hora!";
+    }
+
+temporizador = setInterval (function (){
+    var cronometro = document.getElementById("temporizador").innerHTML;
+    var soma = parseInt(cronometro) + 1;//parseInt para transformar caracter em int
+    document.getElementById("temporizador").innerHTML = soma;
+}, 1000);
+
+function Cronometro(){
+    clearInterval(temporizador);
+    }
+
+
 //Mostrar itens na tela & console
 document.getElementById('teste').innerHTML =  maior20;
 console.log(pessoa);
