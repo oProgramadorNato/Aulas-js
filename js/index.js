@@ -311,7 +311,28 @@ function diadasemana(){
     }
 }
 
+/*
+Laço de repetição e for
+É uma maneira rápida e fácil e rapido de executar uma ação repetidas vezes
+*/
+//for(*ponto inicial* *condição* *resultado da condição*)
+for (let i = 0; i<1000; i++){
+    document.getElementById("for").innerHTML += i + ", "
+}
+    /*Transcrição do código
+    for (let i = 0; i<10001; i++)
+        "i" é igual a zero, começa no zero.
+        Enquanto "i" for menor que 10.001
+        ele vai adicionar um número (i++)
 
+    document.getElementById("for").innerHTML += i + br
+        caso fosse apenas "=" ele só adicionaria o ultimo número, colocamos "+=" para ele sempre ir acrescentando   
+
+
+
+
+
+*/
 //Mostrar itens na tela & console
 document.getElementById('teste').innerHTML =  maior20;
 console.log(pessoa);
