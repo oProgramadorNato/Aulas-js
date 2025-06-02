@@ -367,6 +367,34 @@ function Cronometro(){
     clearInterval(temporizador);
     }
 
+/*
+CLASSES EM JAVASCRIPT
+
+Basicamente, as classes são como "fábricas" para criar objetos
+Assim como uma fábrica da vida real precisa das máquinas para construir os objetos,
+as Classes no JavaScript usa um método chamado constructor() para fabricar os objetos
+(só pra relembrar)
+const carro = {//objeto e as propriedades
+    marca: "Fiat",
+    modelo: "Uno",
+    ano: 2001
+}
+
+ */
+
+class Carro{//a "fabrica" de carros
+    constructor(valor1,valor2,valor3){// a "maquina" que vai construir os carros
+        this.marca = valor1;
+        this.modelo = valor2;
+        this.ano = valor3;
+    }
+}
+
+const uno = new Carro("Fiat","Uno",2001);
+console.log(uno);
+const gol = new Carro("Volkswagem","Caxumba",2020);
+console.log(gol);
+
 
 //Mostrar itens na tela & console
 document.getElementById('teste').innerHTML =  maior20;
